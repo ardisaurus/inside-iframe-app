@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useStoragePermission from "./Home/useStoragePermission";
 
 export default function SafariPermission() {
   const [isError, setisError] = useState(false);
@@ -15,6 +16,9 @@ export default function SafariPermission() {
     }
   };
 
+  const { askForPermission, needPermission, haveCheckedPermission } =
+    useStoragePermission();
+
   return (
     <div>
       <h1>Click button bellow</h1>
@@ -25,6 +29,17 @@ export default function SafariPermission() {
         onClick={handleButtonClick}
       >
         Test Cookie and Close Tab
+      </button>
+
+      <p>needPermission : {needPermission ? "false" : "true"}</p>
+      <p>haveCheckedPermission : {haveCheckedPermission ? "false" : "true"}</p>
+      <button
+        type="button"
+        onClick={() => askForPermission()}
+        className="btn yellow continue btn-yellow-hover"
+        style={{ padding: ".4em", margin: ".2em" }}
+      >
+        click here
       </button>
     </div>
   );
