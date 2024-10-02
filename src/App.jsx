@@ -1,11 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AddCookies from "./pages/AddCookies";
+
 function App() {
-  var CookieName = "TestCookie";
-  document.cookie = "CookieName=TestCookie;samesite=None; secure";
-  if (document.cookie.indexOf(CookieName) == -1) {
-    return <div>Setted</div>;
-  } else {
-    return <div>Nooooo</div>;
-  }
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add-cookies" element={<AddCookies />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
