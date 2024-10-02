@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useStoragePermission from "./Home/useStoragePermission";
+import CookiesTest from "../components/CookiesTest";
 
 export default function SafariPermission() {
   const [isError, setisError] = useState(false);
@@ -41,6 +42,7 @@ export default function SafariPermission() {
       >
         click here
       </button>
+      <CookiesTest />
     </div>
   );
 }
