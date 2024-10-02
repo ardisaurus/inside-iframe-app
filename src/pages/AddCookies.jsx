@@ -43,6 +43,14 @@ export default function SafariPermission() {
         click here
       </button>
       <CookiesTest />
+      <button
+        type="button"
+        onClick={() => window.location.reload()}
+        className="btn yellow continue btn-yellow-hover"
+        style={{ padding: ".4em", margin: ".2em" }}
+      >
+        click to Reload
+      </button>
     </div>
   );
 }

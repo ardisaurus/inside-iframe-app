@@ -10,8 +10,7 @@ export default function CookiesTest() {
   const handleButtonClick = () => {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
-    document.cookie =
-      "CookieItem=fool;samesite=None; secure; max-age=3153600000";
+    document.cookie = "CookieItem=fool; max-age=3153600000";
   };
 
   return (
