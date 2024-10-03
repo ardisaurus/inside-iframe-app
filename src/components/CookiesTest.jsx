@@ -4,7 +4,7 @@ var CookieName = "TestCookie";
 
 export default function CookiesTest() {
   useEffect(() => {
-    document.cookie = "CookieName=TestCookie;samesite=None; secure";
+    document.cookie = "CookieName=TestCookie; samesite=Lax; secure";
   }, []);
 
   const handleButtonClick = () => {

@@ -17,8 +17,7 @@ export default function SafariPermission() {
     }
   };
 
-  const { askForPermission, needPermission, haveCheckedPermission } =
-    useStoragePermission();
+  const { askForPermission } = useStoragePermission();
 
   return (
     <div>
@@ -31,15 +30,15 @@ export default function SafariPermission() {
       >
         Test Cookie and Close Tab
       </button>
-      <p>needPermission : {needPermission ? "true" : "false"}</p>
-      <p>haveCheckedPermission : {haveCheckedPermission ? "true" : "false"}</p>
+      {/* <p>needPermission : {needPermission ? "true" : "false"}</p>
+      <p>haveCheckedPermission : {haveCheckedPermission ? "true" : "false"}</p> */}
       <button
         type="button"
         onClick={() => askForPermission()}
         className="btn yellow continue btn-yellow-hover"
         style={{ padding: ".4em", margin: ".2em" }}
       >
-        click here
+        click here for ask perm
       </button>
       <CookiesTest />
       <button

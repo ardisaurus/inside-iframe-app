@@ -2,8 +2,7 @@ import CookiesTest from "../../components/CookiesTest";
 import useStoragePermission from "./useStoragePermission";
 
 export default function Home() {
-  const { askForPermission, needPermission, haveCheckedPermission } =
-    useStoragePermission();
+  const { askForPermission } = useStoragePermission();
 
   return (
     <div>
@@ -11,10 +10,10 @@ export default function Home() {
         <h2 style={{ color: "red", fontSize: "1.2em" }}>
           New testing (updated)
         </h2>
-        <p>needPermission : {needPermission ? "true" : "false"}</p>
+        {/* <p>needPermission : {needPermission ? "true" : "false"}</p>
         <p>
           haveCheckedPermission : {haveCheckedPermission ? "true" : "false"}
-        </p>
+        </p> */}
 
         <ol>
           <li>click `Test Cookie and Close Tab` in this new tab.</li>
