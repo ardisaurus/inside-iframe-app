@@ -15,6 +15,7 @@ export default function SafariPermission() {
     var CookieItem = "tab";
     document.cookie =
       "onClickCookie=tab; samesite=Lax; secure; max-age=3153600000";
+    localStorage.setItem("lastname", "Smith");
     if (document.cookie.indexOf(CookieItem) == -1) {
       setisError(true);
     }

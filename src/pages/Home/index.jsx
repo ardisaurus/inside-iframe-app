@@ -15,6 +15,7 @@ export default function Home() {
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
     document.cookie =
       "onClickCookie=main; samesite=Lax; secure; max-age=3153600000";
+    localStorage.setItem("lastname", "Smith");
   };
 
   return (
