@@ -7,14 +7,14 @@ export default function SafariPermission() {
 
   useEffect(() => {
     document.cookie =
-      "onLoadCookie=tab; max-age=3153600000; HttpOnly; Secure; SameSite=Lax";
+      "onLoadCookie=main; max-age=3153600000; Secure; SameSite=Lax";
   }, []);
   const handleAddCookieButtonClick = () => {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
-    var CookieItem = "tab";
+    var CookieItem = "main";
     document.cookie =
-      "onClickCookie=tab; max-age=3153600000; HttpOnly; Secure; SameSite=Lax";
+      "onClickCookie=main; max-age=3153600000; Secure; SameSite=Lax";
     if (document.cookie.indexOf(CookieItem) == -1) {
       setisError(true);
     }
@@ -24,7 +24,7 @@ export default function SafariPermission() {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
     document.cookie =
-      "set-cookie: your=cookie; Domain=phenomenal-lollipop-87c933.netlify.app; Path=/; Expires=Thu, 22 Dec 2027 04:17:44 GMT; HttpOnly; Secure; SameSite=Lax";
+      "set-cookie: your=cookie; Domain=phenomenal-lollipop-87c933.netlify.app; Path=/; Expires=Thu, 22 Dec 2027 04:17:44 GMT; Secure; SameSite=Lax";
   };
 
   const handleCloseButtonClick = () => {

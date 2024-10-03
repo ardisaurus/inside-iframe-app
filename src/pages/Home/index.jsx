@@ -7,21 +7,21 @@ export default function Home() {
 
   useEffect(() => {
     document.cookie =
-      "onLoadCookie=main; max-age=3153600000; HttpOnly; Secure; SameSite=Lax";
+      "onLoadCookie=main; max-age=3153600000; Secure; SameSite=Lax";
   }, []);
 
   const handleAddCookieButtonClick = () => {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
     document.cookie =
-      "onClickCookie=main; max-age=3153600000; HttpOnly; Secure; SameSite=Lax";
+      "onClickCookie=main; max-age=3153600000; Secure; SameSite=Lax";
   };
 
   const handleAddCookieButtonClick2 = () => {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
     document.cookie =
-      "set-cookie: your=cookie; Domain=phenomenal-lollipop-87c933.netlify.app; Path=/; Expires=Thu, 22 Dec 2027 04:17:44 GMT; HttpOnly; Secure; SameSite=Lax";
+      "set-cookie: your=cookie; Domain=phenomenal-lollipop-87c933.netlify.app; Path=/; Expires=Thu, 22 Dec 2027 04:17:44 GMT; Secure; SameSite=Lax";
   };
 
   return (
