@@ -1,14 +1,27 @@
-import CookiesTest from "../../components/CookiesTest";
+import { useEffect } from "react";
+// import CookiesTest from "../../components/CookiesTest";
 import useStoragePermission from "./useStoragePermission";
 
 export default function Home() {
   const { askForPermission } = useStoragePermission();
 
+  useEffect(() => {
+    document.cookie =
+      "onLoadCookie=main; samesite=Lax; secure; max-age=3153600000";
+  }, []);
+
+  const handleAddCookieButtonClick = () => {
+    // const cookieValue = 'foo'; // Set the cookie value to 'foo'
+    // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
+    document.cookie =
+      "onClickCookie=main; samesite=Lax; secure; max-age=3153600000";
+  };
+
   return (
     <div>
       <div className="element">
         <h2 style={{ color: "red", fontSize: "1.2em" }}>
-          New testing (updated)
+          cookies permission testing
         </h2>
         {/* <p>needPermission : {needPermission ? "true" : "false"}</p>
         <p>
@@ -16,7 +29,7 @@ export default function Home() {
         </p> */}
 
         <ol>
-          <li>click `Test Cookie and Close Tab` in this new tab.</li>
+          <li>click `Add Cookie` close `Close Tab` in this new tab.</li>
           <a href="./add-cookies" target="_blank">
             click here
           </a>
@@ -41,7 +54,14 @@ export default function Home() {
         </ol>
       </div>
       <hr />
-      <CookiesTest />
+      <button
+        className="btn yellow continue btn-yellow-hover"
+        style={{ padding: ".4em", margin: ".2em" }}
+        onClick={handleAddCookieButtonClick}
+      >
+        Add Cookie
+      </button>
+      {/* <CookiesTest /> */}
     </div>
   );
 }
