@@ -1,23 +1,9 @@
-import { useEffect } from "react";
 import CookiesTest from "../../components/CookiesTest";
 import useStoragePermission from "./useStoragePermission";
 
 export default function Home() {
-  const {
-    askForPermission,
-    needPermission,
-    haveCheckedPermission,
-    isHavingPermissionFn,
-  } = useStoragePermission();
-
-  useEffect(() => {
-    const init = async () => {
-      isHavingPermissionFn().then((isHavingPerm) => {
-        console.log({ isHavingPerm });
-      });
-    };
-    init();
-  }, []);
+  const { askForPermission, needPermission, haveCheckedPermission } =
+    useStoragePermission();
 
   return (
     <div>
@@ -25,9 +11,9 @@ export default function Home() {
         <h2 style={{ color: "red", fontSize: "1.2em" }}>
           New testing (updated)
         </h2>
-        <p>needPermission : {needPermission ? "false" : "true"}</p>
+        <p>needPermission : {needPermission ? "true" : "false"}</p>
         <p>
-          haveCheckedPermission : {haveCheckedPermission ? "false" : "true"}
+          haveCheckedPermission : {haveCheckedPermission ? "true" : "false"}
         </p>
 
         <ol>

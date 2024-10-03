@@ -9,7 +9,7 @@ export default function SafariPermission() {
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
     var CookieItem = "foo";
     document.cookie =
-      "CookieItem=foo;samesite=None; secure; max-age=3153600000";
+      "CookieItem=foo; samesite=Lax; secure; max-age=3153600000";
     if (document.cookie.indexOf(CookieItem) == -1) {
       setisError(true);
     } else {
@@ -31,9 +31,8 @@ export default function SafariPermission() {
       >
         Test Cookie and Close Tab
       </button>
-
-      <p>needPermission : {needPermission ? "false" : "true"}</p>
-      <p>haveCheckedPermission : {haveCheckedPermission ? "false" : "true"}</p>
+      <p>needPermission : {needPermission ? "true" : "false"}</p>
+      <p>haveCheckedPermission : {haveCheckedPermission ? "true" : "false"}</p>
       <button
         type="button"
         onClick={() => askForPermission()}
