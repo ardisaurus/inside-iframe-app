@@ -16,8 +16,8 @@ export default function CookiesTest() {
   const handleButton2Click = () => {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
-    // document.cookie =
-    "set-cookie: your=cookie; Domain=phenomenal-lollipop-87c933.netlify.app; Path=/; Expires=Thu, 22 Dec 2027 04:17:44 GMT; Secure; SameSite=Lax";
+    document.cookie =
+      "set-cookie: your=cookie; Domain=phenomenal-lollipop-87c933.netlify.app; Path=/; Expires=Thu, 22 Dec 2027 04:17:44 GMT; Secure; SameSite=Lax";
   };
 
   return (
