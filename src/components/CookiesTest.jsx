@@ -11,7 +11,7 @@ export default function CookiesTest() {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
     // document.cookie = `myCookie=${cookieValue}; path=/; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}`;
     document.cookie =
-      "CookieItem=fool;samesite=None; secure; max-age=3153600000";
+      "CookieItem=fool; samesite=Lax; secure; max-age=3153600000";
   };
   const handleButton2Click = () => {
     // const cookieValue = 'foo'; // Set the cookie value to 'foo'
@@ -22,9 +22,9 @@ export default function CookiesTest() {
 
   return (
     <div>
-      A cookie : {document.cookie.indexOf(CookieName) == -1 ? "no" : "yes"}
+      A Cookie : {document.cookie.indexOf(CookieName) == -1 ? "no" : "yes"}
       <div>
-        <p>B cookie : {document.cookie.indexOf("fool") == -1 ? "no" : "yes"}</p>
+        <p>B Cookie : {document.cookie.indexOf("fool") == -1 ? "no" : "yes"}</p>
         <button
           type="button"
           onClick={() => handleButtonClick()}
@@ -36,7 +36,7 @@ export default function CookiesTest() {
       </div>
       <div>
         <p>
-          C cookie : {document.cookie.indexOf("cookie") == -1 ? "no" : "yes"}
+          C Cookie : {document.cookie.indexOf("cookie") == -1 ? "no" : "yes"}
         </p>
         <button
           type="button"
