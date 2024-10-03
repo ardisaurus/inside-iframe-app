@@ -48,5 +48,6 @@ export default function useStoragePermission() {
         console.log(requiresStoragePermissions(), 'requiresStoragePermissions');
       },
     haveCheckedPermission,
+    isHavingPermissionFn
   };
 }

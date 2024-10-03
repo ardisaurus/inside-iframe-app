@@ -1,9 +1,24 @@
+import { useEffect } from "react";
 import CookiesTest from "../../components/CookiesTest";
 import useStoragePermission from "./useStoragePermission";
 
 export default function Home() {
-  const { askForPermission, needPermission, haveCheckedPermission } =
-    useStoragePermission();
+  const {
+    askForPermission,
+    needPermission,
+    haveCheckedPermission,
+    isHavingPermissionFn,
+  } = useStoragePermission();
+
+  useEffect(() => {
+    const init = async () => {
+      isHavingPermissionFn().then((isHavingPerm) => {
+        console.log({ isHavingPerm });
+      });
+    };
+    init();
+  }, []);
+
   return (
     <div>
       <div className="element">
