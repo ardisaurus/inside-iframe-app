@@ -25,7 +25,9 @@ export default function useStoragePermission() {
 
   const askForPermission = useCallback(async () => {
     try {
-      await requestStorageAccess();
+      const x = await requestStorageAccess();
+      console.log({ x });
+
       checkPermission();
     } catch (e: any) {
       console.error('Error checking storage access:', e);
