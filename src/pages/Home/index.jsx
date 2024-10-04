@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import useStoragePermission from "./useStoragePermission";
 
 export default function Home() {
-  const { askForPermission } = useStoragePermission();
+  const { askForPermission, needPermission, haveCheckedPermission } =
+    useStoragePermission();
 
   useEffect(() => {
     document.cookie =
@@ -30,10 +31,10 @@ export default function Home() {
         <h2 style={{ color: "red", fontSize: "1.2em" }}>
           cookies permission testing
         </h2>
-        {/* <p>needPermission : {needPermission ? "true" : "false"}</p>
+        <p>needPermission : {needPermission ? "true" : "false"}</p>
         <p>
           haveCheckedPermission : {haveCheckedPermission ? "true" : "false"}
-        </p> */}
+        </p>
 
         <ol>
           <li>click `Add Cookie` close `Close Tab` in this new tab.</li>
